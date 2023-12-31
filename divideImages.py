@@ -45,7 +45,6 @@ for subdir in os.listdir(main_directory):
         num_images_validation = int(len(os.listdir(subdir_path)) * (validation_percentage / 100))
         num_images_test = int(len(os.listdir(subdir_path)) * (test_percentage / 100))
         
-        print("Hooooooooooooo", subdir, num_images_train, num_images_validation, num_images_test)
         # Move images to the new directories
         move_random_images(subdir_path, train_dir, num_images_train, exclude_set)
         move_random_images(subdir_path, validation_dir, num_images_validation, exclude_set)
