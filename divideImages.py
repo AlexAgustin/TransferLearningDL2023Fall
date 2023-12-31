@@ -3,12 +3,12 @@ import random
 import shutil
 
 # Path to the main directory containing the 64 subdirectories
-main_directory = 'C:/Users/alexm/Documents/Cuarto/DL/miniImageNet'
+main_directory = ''
 
 # Names of the new directories
-train_dir = 'C:/Users/alexm/Documents/Cuarto/DL/miniImageNet/train'
-validation_dir = 'C:/Users/alexm/Documents/Cuarto/DL/miniImageNet/validation'
-test_dir = 'C:/Users/alexm/Documents/Cuarto/DL/miniImageNet/test'
+train_dir = ''
+validation_dir = ''
+test_dir = ''
 
 # Percentage of images for each set
 train_percentage = 70
