@@ -11,9 +11,9 @@ validation_dir = ''     #TODO write here the path to the previously created fold
 test_dir = ''           #TODO write here the path to the previously created folder destinated to store test images
 
 # Percentage of images for each set
-train_percentage = 70
-validation_percentage = 15
-test_percentage = 15
+train_percentage = 00        #TODO set the percentage of images you want for the train subset
+validation_percentage = 00   #TODO set the percentage of images you want for the validation subset
+test_percentage = 00
 
 # Function to move random images to a new directory
 def move_random_images(source_dir, dest_dir, num_images, exclude_set):
@@ -45,7 +45,6 @@ for subdir in os.listdir(main_directory):
         num_images_validation = int(len(os.listdir(subdir_path)) * (validation_percentage / 100))
         num_images_test = int(len(os.listdir(subdir_path)) * (test_percentage / 100))
         
-        print("Hooooooooooooo", subdir, num_images_train, num_images_validation, num_images_test)
         # Move images to the new directories
         move_random_images(subdir_path, train_dir, num_images_train, exclude_set)
         move_random_images(subdir_path, validation_dir, num_images_validation, exclude_set)
