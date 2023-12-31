@@ -3,11 +3,11 @@ import random
 import shutil
 
 # Path to the main directory containing the 64 subdirectories
-main_directory = 'C:/Users/alexm/Documents/Cuarto/DL/EuroSAT_RGB'
+main_directory = ''
 
 # Names of the new directories
-train_dir = 'C:/Users/alexm/Documents/Cuarto/DL/EuroSAT_RGB/train'
-test_dir = 'C:/Users/alexm/Documents/Cuarto/DL/EuroSAT_RGB/test'
+train_dir = ''
+test_dir = ''
 
 # Percentage of images for each set
 train_percentage = 75
@@ -42,7 +42,7 @@ for subdir in os.listdir(main_directory):
         num_images_train = int(len(os.listdir(subdir_path)) * (train_percentage / 100))
         num_images_test = int(len(os.listdir(subdir_path)) * (test_percentage / 100))
         
-        print("Hooooooooooooo", subdir, num_images_train, num_images_test)
+        print("======>", subdir, num_images_train, num_images_test)
         # Move images to the new directories
         move_random_images(subdir_path, train_dir, num_images_train, exclude_set)
         move_random_images(subdir_path, test_dir, num_images_test, exclude_set)
